@@ -1102,7 +1102,22 @@ footer a:hover{
   .btn-header{
     display:none;
   }
+    /* Sobre */
+    @media (max-width:768px){
 
+      .sobre-img{
+        display:flex;
+        justify-content:center;
+      }
+    
+      .sobre-img img{
+        width:100%;
+        max-width:400px;
+        height:auto;
+        margin-left:0;
+      }
+    
+    }
   .hero h1{
     font-size:50px;
   }
