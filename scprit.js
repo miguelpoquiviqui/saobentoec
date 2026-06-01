@@ -50,12 +50,24 @@ document.getElementById("contact-form").addEventListener("submit", (e) => {
   e.target.reset();
 });
 
-// ANIMAÇÃO MINI-CARDS (IntersectionObserver)
+(function initCarousel() {
+  const track = document.getElementById('carousel-track');
+  if (!track) return;
+
+  // Clona os cards originais e adiciona ao final — cria o loop seamless
+  const originals = Array.from(track.children);
+  originals.forEach(card => track.appendChild(card.cloneNode(true)));
+
+  // Aplica a animação após a duplicação
+  track.style.animation = 'carousel-loop 20s linear infinite';
+})();
+
+// IntersectionObserver para mini-cards (mantido intacto)
 const cardObserver = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.3 });
 
-document.querySelectorAll(".mini-card").forEach(card => cardObserver.observe(card));
+document.querySelectorAll('.mini-card').forEach(card => cardObserver.observe(card));
 
 // =====================
 //     CHATBOT
