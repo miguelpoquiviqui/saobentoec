@@ -432,51 +432,6 @@ nav a:hover{
   margin-left:50px;
 }
 
-/* ELENCO */
-.players{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
-}
-
-.player-card{
-  background:#111;
-  border-radius:25px;
-  overflow:hidden;
-  position:relative;
-  transition:.4s;
-}
-
-.player-card:hover{
-  transform:translateY(-10px);
-}
-
-.player-card img{
-  height:350px;
-  object-fit:cover;
-}
-
-.player-info{
-  padding:25px;
-}
-
-.number{
-  position:absolute;
-  top:15px;
-  right:15px;
-  background:#c9b07b;
-  color:black;
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-weight:bold;
-  font-family:'Oswald', sans-serif;
-  font-size:18px;
-}
-
 /* JOGOS */
 .games{
   display:grid;
